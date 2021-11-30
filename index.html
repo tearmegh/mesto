@@ -3,6 +3,67 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Путешествия по России</title>
+    <title>Mesto</title>
     <link rel="stylesheet" href="./pages/index.css">
   </head>
+  <body class="page">
+    <header class="header page__header">
+      <img class="header__logo" alt="логотип проекта Mesto" src="./images/logo-theme-dark.svg">
+    </header>
+    <main>
+      <section class="profile page__profile">
+        <img class="profile__image" alt="фотография профиля пользователя" src="./images/profile-image.jpg">
+        <div class="profile__info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-btn"></button>
+          <p class="profile__caption">Исследователь океана</p>
+          <form class="profile__edit-form">
+            <fieldset class="profile__name-caption-container">
+              <input type="text" class="profile__name-input">
+              <input type="text" class="profile__caption-input">
+            </fieldset>
+            <input type="submit" class="profile__submit-btn">
+          </form>
+        </div>
+        <button class="profile__add-btn"></button>
+      </section>
+      <section>
+        <ul class="cards">
+          <li class="cards__item">
+            <img class="cards__image" alt="" src="">
+            <h2 class="cards__title"></h2>
+            <button class="cards__like-btn"></button>
+          </li>
+          <li class="cards__item">
+            <img class="cards__image" alt="" src="">
+            <h2 class="cards__title"></h2>
+            <button class="cards__like-btn"></button>
+          </li>
+          <li class="cards__item">
+            <img class="cards__image" alt="" src="">
+            <h2 class="cards__title"></h2>
+            <button class="cards__like-btn"></button>
+          </li>
+          <li class="cards__item">
+            <img class="cards__image" alt="" src="">
+            <h2 class="cards__title"></h2>
+            <button class="cards__like-btn"></button>
+          </li>
+          <li class="cards__item">
+            <img class="cards__image" alt="" src="">
+            <h2 class="cards__title"></h2>
+            <button class="cards__like-btn"></button>
+          </li>
+          <li class="cards__item">
+            <img class="cards__image" alt="" src="">
+            <h2 class="cards__title"></h2>
+            <button class="cards__like-btn"></button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer page__footer">
+      <p class="footer__copyright">&copy 2021 Mesto Russia</p>
+    </footer>
+  </body>
+</html>
