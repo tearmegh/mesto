@@ -1,0 +1,23 @@
+.profile__close-btn {
+  width: 32px;
+  height: 32px;
+  background: url(../../../images/close-btn.svg);
+  background-size: contain;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+.profile__close-btn:hover {
+  opacity: .6;
+  transition: .2s;
+}
+@media screen and (max-width: 767.98px) {
+  .profile__close-btn {
+      right: 0;
+      top: -48px;
+      width: 20px;
+      height: 20px;
+  }
+}

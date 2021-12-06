@@ -14,49 +14,54 @@
       <section class="profile page__profile">
         <img class="profile__image" alt="фотография профиля пользователя" src="./images/profile-image.jpg">
         <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button class="profile__edit-btn"></button>
+          <div class="profile__name-edit-btn-wrapper">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-btn"></button>
+          </div>
           <p class="profile__caption">Исследователь океана</p>
           <form class="profile__edit-form">
+            <h2 class="profile__form-title">Редактировать профиль</h2>
             <fieldset class="profile__name-caption-container">
-              <input type="text" class="profile__name-input">
-              <input type="text" class="profile__caption-input">
+              <input type="text" placeholder="Имя" class="profile__name-input profile__input">
+              <input type="text" placeholder="Описание" class="profile__caption-input profile__input">
             </fieldset>
-            <input type="submit" class="profile__submit-btn">
+            <input type="image" class="profile__submit-btn">
+            <button class="profile__close-btn"></button>
           </form>
         </div>
+        
         <button class="profile__add-btn"></button>
       </section>
       <section>
         <ul class="cards">
           <li class="cards__item">
-            <img class="cards__image" alt="" src="">
-            <h2 class="cards__title"></h2>
+            <img class="cards__image" alt="старый замок" src="./images/united-kingdom.jpg">
+            <h2 class="cards__title">Великобритания</h2>
             <button class="cards__like-btn"></button>
           </li>
           <li class="cards__item">
-            <img class="cards__image" alt="" src="">
-            <h2 class="cards__title"></h2>
+            <img class="cards__image" alt="одинокий домик" src="./images/faroe-islands.jpg">
+            <h2 class="cards__title">Фарерские острова</h2>
             <button class="cards__like-btn"></button>
           </li>
           <li class="cards__item">
-            <img class="cards__image" alt="" src="">
-            <h2 class="cards__title"></h2>
+            <img class="cards__image" alt="туманное поле" src="./images/netherlands.jpg">
+            <h2 class="cards__title">Нидерланды</h2>
             <button class="cards__like-btn"></button>
           </li>
           <li class="cards__item">
-            <img class="cards__image" alt="" src="">
-            <h2 class="cards__title"></h2>
+            <img class="cards__image" alt="скалистая местность" src="./images/spain.jpg">
+            <h2 class="cards__title">Испания</h2>
             <button class="cards__like-btn"></button>
           </li>
           <li class="cards__item">
-            <img class="cards__image" alt="" src="">
-            <h2 class="cards__title"></h2>
+            <img class="cards__image" alt="птица над туманным полем" src="./images/austria.jpg">
+            <h2 class="cards__title">Австрия</h2>
             <button class="cards__like-btn"></button>
           </li>
           <li class="cards__item">
-            <img class="cards__image" alt="" src="">
-            <h2 class="cards__title"></h2>
+            <img class="cards__image" alt="живописный лес" src="./images/chile.jpg">
+            <h2 class="cards__title">Чили</h2>
             <button class="cards__like-btn"></button>
           </li>
         </ul>
