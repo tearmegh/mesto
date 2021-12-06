@@ -1,8 +1,8 @@
 .page__cards {
-  margin: 0 auto 66px;
-}
-@media screen and (max-width: 767.98px) {
-  .page__cards{
-    margin-bottom: 48px;
+    margin: 0 auto 66px;
   }
-}
+  @media screen and (max-width: 767.98px) {
+    .page__cards{
+      margin-bottom: 48px;
+    }
+  }

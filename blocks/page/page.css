@@ -1,4 +1,12 @@
 .page {
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 1);
   font-family: 'Inter', 'Arial', sans-serif;
 }
+=======
+    background-color: rgba(0, 0, 0, 1);
+    font-family: 'Inter', 'Arial', sans-serif;
+    max-width: 880px;
+    margin: auto;
+  }
+>>>>>>> features/cards
