@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./pages/index.css">
   </head>
   <body class="page">
+    <div class="page__overlay"></div>
     <header class="header page__header">
       <img class="header__logo" alt="логотип проекта Mesto" src="./images/logo-theme-dark.svg">
     </header>
@@ -22,10 +23,10 @@
           <form class="profile__edit-form">
             <h2 class="profile__form-title">Редактировать профиль</h2>
             <fieldset class="profile__name-caption-container">
-              <input type="text" placeholder="Имя" class="profile__name-input profile__input">
-              <input type="text" placeholder="Описание" class="profile__caption-input profile__input">
+              <input type="text" class="profile__name-input profile__input" value="name">
+              <input type="text" class="profile__caption-input profile__input" value="caption">
             </fieldset>
-            <input type="image" class="profile__submit-btn">
+            <input type="submit" class="profile__submit-btn">
             <button class="profile__close-btn"></button>
           </form>
         </div>

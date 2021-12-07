@@ -1,10 +1,10 @@
 .profile__info {
-    color: white;
-    margin-left: 30px;
-    font-family: 'Inter', 'Arial', sans-serif;
+  color: white;
+  margin-left: 30px;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+@media screen and (max-width: 767.98px){
+  .profile__info {
+    margin-left: 0;
   }
-  @media screen and (max-width: 767.98px){
-    .profile__info {
-      margin-left: 0;
-    }
-  }
+}

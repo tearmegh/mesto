@@ -1,10 +1,10 @@
 .profile__name-edit-btn-wrapper {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
+}
+@media screen and (max-width: 767.98px) {
+  .profile__name-edit-btn-wrapper {
+    position: relative;
+    left: 14px;
   }
-  @media screen and (max-width: 767.98px) {
-    .profile__name-edit-btn-wrapper {
-      position: relative;
-      left: 14px;
-    }
-  } 
+} 
