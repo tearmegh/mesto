@@ -6,6 +6,7 @@
   height: 50px;
   margin-right: 0;
   margin-left: auto;
+  cursor: pointer;
 }
 .profile__add-btn:hover {
   opacity: .6;

@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="./pages/index.css">
   </head>
   <body class="page">
-    <div class="page__overlay"></div>
     <header class="header page__header">
       <img class="header__logo" alt="логотип проекта Mesto" src="./images/logo-theme-dark.svg">
     </header>
     <main class="main">
+      <div class="popup">
+        <form class="popup__edit-form" name="form">
+          <h2 class="popup__form-title">Редактировать профиль</h2>
+          <fieldset class="popup__name-caption-container">
+            <input type="text" class="popup__input popup__input_type_name" name="name">
+            <input type="text" class="popup__input popup__input_type_caption" name="caption">
+          </fieldset>
+          <button type="submit" class="popup__submit-btn" aria-labelledby="сохранить изменения">Сохранить</button>
+          <button type="button" class="popup__close-btn" aria-label="закрыть окно редактирования"></button>
+        </form>
+        <div class="popup__overlay"></div>
+      </div>
       <section class="profile page__profile">
         <img class="profile__image" alt="фотография профиля пользователя" src="./images/profile-image.jpg">
         <div class="profile__info">
           <div class="profile__name-edit-btn-wrapper">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-btn"></button>
+            <button class="profile__edit-btn" type="button" aria-label="редактировать профиль"></button>
           </div>
           <p class="profile__caption">Исследователь океана</p>
-          <form class="profile__edit-form">
-            <h2 class="profile__form-title">Редактировать профиль</h2>
-            <fieldset class="profile__name-caption-container">
-              <input type="text" class="profile__name-input profile__input" value="name">
-              <input type="text" class="profile__caption-input profile__input" value="caption">
-            </fieldset>
-            <input type="submit" class="profile__submit-btn">
-            <button class="profile__close-btn"></button>
-          </form>
         </div>
-
-        <button class="profile__add-btn"></button>
+        <button class="profile__add-btn" type="button" aria-label="добавить элемент"></button>
       </section>
       <section>
         <ul class="cards page__cards">
@@ -39,42 +40,42 @@
             <img class="cards__image" alt="старый замок" src="./images/united-kingdom.jpg">
             <div class="cards__title-btn-wrapper">
               <h2 class="cards__title">Великобритания</h2>
-              <button class="cards__like-btn"></button>
+              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
           <li class="cards__item">
             <img class="cards__image" alt="одинокие домики" src="./images/faroe-islands.jpg">
             <div class="cards__title-btn-wrapper">
               <h2 class="cards__title">Фарерские острова</h2>
-              <button class="cards__like-btn"></button>
+              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
           <li class="cards__item">
             <img class="cards__image" alt="туманное поле" src="./images/netherlands.jpg">
             <div class="cards__title-btn-wrapper">
               <h2 class="cards__title">Нидерланды</h2>
-              <button class="cards__like-btn"></button>
+              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
           <li class="cards__item">
             <img class="cards__image" alt="скалистая местность" src="./images/spain.jpg">
             <div class="cards__title-btn-wrapper">
               <h2 class="cards__title">Испания</h2>
-              <button class="cards__like-btn"></button>
+              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
           <li class="cards__item">
             <img class="cards__image" alt="птица над туманным полем" src="./images/austria.jpg">
             <div class="cards__title-btn-wrapper">
               <h2 class="cards__title">Австрия</h2>
-              <button class="cards__like-btn"></button>
+              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
           <li class="cards__item">
             <img class="cards__image" alt="живописный лес" src="./images/chile.jpg">
             <div class="cards__title-btn-wrapper">
               <h2 class="cards__title">Чили</h2>
-              <button class="cards__like-btn"></button>
+              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
         </ul>
