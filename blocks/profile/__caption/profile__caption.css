@@ -14,5 +14,6 @@
     line-height: 1.21;
     text-align: center;
     margin-top: 14px;
+    max-width: 240px;
   }
 }
