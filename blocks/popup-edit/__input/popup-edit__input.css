@@ -1,4 +1,4 @@
-.popup__input {
+.popup-edit__input {
   min-height: 27px;
   width: 100%;
   border: none;
@@ -11,6 +11,6 @@
   line-height: 1.21;
   margin-bottom: 30px;
   }
-.popup__input:last-of-type {
+.popup-edit__input:last-of-type {
   margin-bottom: 0;
 }

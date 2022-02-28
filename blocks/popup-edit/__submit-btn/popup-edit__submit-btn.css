@@ -1,4 +1,4 @@
-.popup__submit-btn {
+.popup-edit__submit-btn {
   background: black;
   color: white;
   font-size: 18px;
@@ -9,12 +9,12 @@
   margin: 48px 0 0;
   cursor: pointer;
 }
-.popup__submit-btn:hover {
+.popup-edit__submit-btn:hover {
   opacity: .8;
   transition: .2s;
 }
 @media screen and (max-width: 767.98px) {
-  .popup__submit-btn {
+  .popup-edit__submit-btn {
     height: 46px;
     margin: 45px 0 0;
     font-size: 14px;

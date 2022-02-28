@@ -11,17 +11,29 @@
       <img class="header__logo" alt="логотип проекта Mesto" src="./images/logo-theme-dark.svg">
     </header>
     <main class="main">
-      <div class="popup">
-        <form class="popup__edit-form" name="form">
-          <h2 class="popup__form-title">Редактировать профиль</h2>
-          <fieldset class="popup__name-caption-container">
-            <input type="text" class="popup__input popup__input_type_name" name="name">
-            <input type="text" class="popup__input popup__input_type_caption" name="caption">
+      <div class="popup-edit">
+        <form class="popup-edit__form" name="edit-form">
+          <h2 class="popup-edit__form-title">Редактировать профиль</h2>
+          <fieldset class="popup-edit__name-caption-container">
+            <input type="text" class="popup-edit__input popup-edit__input_type_name" placeholder="Имя" name="name">
+            <input type="text" class="popup-edit__input popup-edit__input_type_caption" placeholder="Описание" name="caption">
           </fieldset>
-          <button type="submit" class="popup__submit-btn" aria-label="сохранить изменения">Сохранить</button>
-          <button type="button" class="popup__close-btn" aria-label="закрыть окно редактирования"></button>
+          <button type="submit" class="popup-edit__submit-btn" aria-label="сохранить изменения">Сохранить</button>
+          <button type="button" class="popup-edit__close-btn" aria-label="закрыть окно редактирования"></button>
         </form>
-        <div class="popup__overlay"></div>
+        <div class="popup-edit__overlay"></div>
+      </div>
+      <div class="popup-add">
+        <form class="popup-add__form" name="add-form">
+          <h2 class="popup-add__form-title">Новое место</h2>
+          <fieldset class="popup-add__title-link-container">
+            <input type="text" class="popup-add__input popup-add__input_type_title" placeholder="Название" name="title">
+            <input type="text" class="popup-add__input popup-add__input_type_link" placeholder="Ссылка на картинку" name="link">
+          </fieldset>
+          <button type="submit" class="popup-add__submit-btn" aria-label="создать">Создать</button>
+          <button type="button" class="popup-add__close-btn" aria-label="закрыть окно создания"></button>
+        </form>
+        <div class="popup-add__overlay"></div>
       </div>
       <section class="profile page__profile">
         <img class="profile__image" alt="фотография профиля пользователя" src="./images/profile-image.jpg">
@@ -78,6 +90,15 @@
               <button class="cards__like-btn" type="button" aria-label="нравится"></button>
             </div>
           </li>
+          <template id="card-template">
+            <li class="cards__item">
+              <img class="cards__image">
+              <div class="cards__title-btn-wrapper">
+                <h2 class="cards__title"></h2>
+                <button class="cards__like-btn" type="button" aria-label="нравится"></button>
+              </div>
+            </li>
+          </template>
         </ul>
       </section>
     </main>

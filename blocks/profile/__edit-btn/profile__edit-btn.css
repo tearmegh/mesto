@@ -6,6 +6,8 @@
   height: 24px;
   width: 24px;
   cursor: pointer;
+  position: relative;
+  top: 6px;
 }
 .profile__edit-btn:hover {
   opacity: .6;
@@ -16,5 +18,7 @@
     width: 18px;
     height: 18px;
     margin-left: 10px;
+    position: relative;
+    top: 3.6px;
   }
-} 
+}

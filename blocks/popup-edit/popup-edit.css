@@ -1,13 +1,13 @@
-.popup {
+.popup-edit {
   position: fixed;
   top: 195px;
   left: calc(50% - 430px / 2);
   max-width: 430px;
   z-index: 10;
-  display: none;
+  display: none; 
 }
 @media screen and (max-width: 767.98px){
-  .popup {
+  .popup-edit {
     max-width: 282px;
     top: 123px;
     left: calc(50% - 282px / 2);

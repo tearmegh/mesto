@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: repeat(3, 282px);
   grid-template-rows: repeat(2, 361px);
+  grid-auto-rows: 361px;
+  grid-auto-columns: 282px;
   gap: 17px;
   padding: 0;
   list-style: none;
