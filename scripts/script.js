@@ -40,7 +40,7 @@ const editFormOverlay = document.querySelector(".popup-edit__overlay");
 const addFormOverlay = document.querySelector(".popup-add__overlay");
 const cardTemplate = document.getElementById("card-template").content;
 const cardElement = cardTemplate.querySelector(".cards__item").cloneNode(true);
-const cards = document.querySelector('.cards');
+const cards = document.querySelector(".cards");
 let nameText = document.querySelector(".profile__name");
 let captionText = document.querySelector(".profile__caption");
 let nameInput = document.querySelector(".popup-edit__input_type_name");
@@ -48,30 +48,30 @@ let captionInput = document.querySelector(".popup-edit__input_type_caption");
 let titleInput = document.querySelector(".popup-add__input_type_title");
 let linkInput = document.querySelector(".popup-add__input_type_link");
 function renderCard(initialCards) {
-  const liElement = document.createElement('li');
-  liElement.classList.add('cards__item');
+  const liElement = document.createElement("li");
+  liElement.classList.add("cards__item");
 
-  const imgElement = document.createElement('img');
-  imgElement.classList.add('cards__image');
+  const imgElement = document.createElement("img");
+  imgElement.classList.add("cards__image");
   imgElement.src = initialCards.src;
   imgElement.alt = initialCards.alt;
 
-  const deleteBtnElement = document.createElement('button');
-  deleteBtnElement.classList.add('cards__delete-btn');
-  deleteBtnElement.type = 'button';
-  deleteBtnElement.setAttribute('aria-label', 'удалить');
+  const deleteBtnElement = document.createElement("button");
+  deleteBtnElement.classList.add("cards__delete-btn");
+  deleteBtnElement.type = "button";
+  deleteBtnElement.setAttribute("aria-label", "удалить");
 
-  const titleElement = document.createElement('h2');
-  titleElement.classList.add('cards__title');
+  const titleElement = document.createElement("h2");
+  titleElement.classList.add("cards__title");
   titleElement.textContent = initialCards.title;
 
-  const likeBtnElement = document.createElement('button');
-  likeBtnElement.classList.add('cards__like-btn');
-  likeBtnElement.type = 'button';
-  likeBtnElement.setAttribute('aria-label', 'нравится');
+  const likeBtnElement = document.createElement("button");
+  likeBtnElement.classList.add("cards__like-btn");
+  likeBtnElement.type = "button";
+  likeBtnElement.setAttribute("aria-label", "нравится");
 
   const divElement = document.createElement('div');
-  divElement.classList.add('cards__title-btn-wrapper');
+  divElement.classList.add("cards__title-btn-wrapper");
   divElement.appendChild(titleElement);
   divElement.appendChild(likeBtnElement);
 
@@ -80,6 +80,7 @@ function renderCard(initialCards) {
   liElement.appendChild(divElement);
   
   cards.appendChild(liElement);
+  deleteBtnElement.addEventListener("click", cardDeleteHandler);
 }
 
 function renderCards (initialCards) {
@@ -115,6 +116,10 @@ function createCard (cardElement) {
   cardElement.querySelector(".cards__title").textContent = titleInput.value;
   return cardElement;
 }
+function cardDeleteHandler (evt) {
+  const cardElement = evt.target.closest(".cards__item");
+  cardElement.remove();
+}
 function editFormSubmitHandler (evt) {
   evt.preventDefault();
   nameText.innerText = nameInput.value;
@@ -135,3 +140,4 @@ closeEditFormBtn.addEventListener("click", closeEditForm);
 closeAddFormBtn.addEventListener("click", closeAddForm);
 editFormOverlay.addEventListener("click", closeEditForm);
 addFormOverlay.addEventListener("click", closeAddForm);
+cardElement.querySelector(".cards__delete-btn").addEventListener("click", cardDeleteHandler);
