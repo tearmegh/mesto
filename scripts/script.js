@@ -38,15 +38,22 @@ const closeEditFormBtn = document.querySelector(".popup-edit__close-btn");
 const closeAddFormBtn = document.querySelector(".popup-add__close-btn");
 const editFormOverlay = document.querySelector(".popup-edit__overlay");
 const addFormOverlay = document.querySelector(".popup-add__overlay");
+const overlay = document.querySelector(".overlay");
+const imgPopup = document.querySelector(".img-popup");
+const imgPopupCardImage = imgPopup.querySelector(".img-popup__image");
+const imgPopupCloseBtn = imgPopup.querySelector(".img-popup__close-btn");
+
 const cardTemplate = document.getElementById("card-template").content;
 const cardElement = cardTemplate.querySelector(".cards__item").cloneNode(true);
+const cardDeleteBtn = cardElement.querySelector(".cards__delete-btn");
+const cardImage = cardElement.querySelector(".cards__image");
 const cards = document.querySelector(".cards");
-let nameText = document.querySelector(".profile__name");
-let captionText = document.querySelector(".profile__caption");
-let nameInput = document.querySelector(".popup-edit__input_type_name");
-let captionInput = document.querySelector(".popup-edit__input_type_caption");
-let titleInput = document.querySelector(".popup-add__input_type_title");
-let linkInput = document.querySelector(".popup-add__input_type_link");
+const nameText = document.querySelector(".profile__name");
+const captionText = document.querySelector(".profile__caption");
+const nameInput = document.querySelector(".popup-edit__input_type_name");
+const captionInput = document.querySelector(".popup-edit__input_type_caption");
+const titleInput = document.querySelector(".popup-add__input_type_title");
+const linkInput = document.querySelector(".popup-add__input_type_link");
 function renderCard(initialCards) {
   const liElement = document.createElement("li");
   liElement.classList.add("cards__item");
@@ -82,7 +89,7 @@ function renderCard(initialCards) {
   cards.appendChild(liElement);
   likeBtnElement.addEventListener("click", function (evt) {
     console.log(evt);
-    evt.target.classList.toggle("cards_like-btn_active");
+    evt.target.classList.toggle("cards__like-btn_active");
   });
   deleteBtnElement.addEventListener("click", cardDeleteHandler);
 }
@@ -120,6 +127,25 @@ function createCard (cardElement) {
   cardElement.querySelector(".cards__title").textContent = titleInput.value;
   return cardElement;
 }
+//функция открытия попапа с картинкой
+function openImgPopup (evt) {
+  console.log("fff");
+  imgPopup.classList.add(".active");
+  overlay.classList.add(".active");
+  document.body.classList.add(".hidden");
+  const cardElement = evt.target.closest(".cards__item");
+  const cardImage = cardElement.querySelector(".cards__image");
+  const cardTitle = cardElement.querySelector(".cards__title");
+  const openedImage = imgPopup.querySelector(".img-popup__image");
+  const openedImageCaption = imgPopup.querySelector(".img-popup__caption");
+  openedImage.src = cardImage.src;
+  openedImageCaption.textContent = cardTitle.textContent;
+}
+function closeImgPopup () {
+  imgPopup.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("hidden");
+}
 function cardDeleteHandler (evt) {
   const cardElement = evt.target.closest(".cards__item");
   cardElement.remove();
@@ -145,6 +171,8 @@ closeAddFormBtn.addEventListener("click", closeAddForm);
 editFormOverlay.addEventListener("click", closeEditForm);
 addFormOverlay.addEventListener("click", closeAddForm);
 cardElement.querySelector(".cards__like-btn").addEventListener("click", function (evt) {
-  evt.target.classList.toggle("cards_like-btn_active");
+  evt.target.classList.toggle("cards__like-btn_active");
 });
-cardElement.querySelector(".cards__delete-btn").addEventListener("click", cardDeleteHandler);
+cardDeleteBtn.addEventListener("click", cardDeleteHandler);
+document.querySelector(".cards__image").addEventListener("click", openImgPopup);
+imgPopupCloseBtn.addEventListener("click", closeImgPopup);

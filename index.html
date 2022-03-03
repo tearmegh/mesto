@@ -11,6 +11,7 @@
       <img class="header__logo" alt="логотип проекта Mesto" src="./images/logo-theme-dark.svg">
     </header>
     <main class="main">
+      <div class="overlay"></div>
       <div class="popup-edit">
         <form class="popup-edit__form" name="edit-form">
           <h2 class="popup-edit__form-title">Редактировать профиль</h2>
@@ -34,6 +35,13 @@
           <button type="button" class="popup-add__close-btn" aria-label="закрыть окно создания"></button>
         </form>
         <div class="popup-add__overlay"></div>
+      </div>
+      <div class="img-popup">
+        <figure class="img-popup__figure">
+          <img class="img-popup__image">
+          <figcaption class="img-popup__caption"></figcaption>
+        </figure>
+        <button type="button" class="img-popup__close-btn"></button>
       </div>
       <section class="profile page__profile">
         <img class="profile__image" alt="фотография профиля пользователя" src="./images/profile-image.jpg">
