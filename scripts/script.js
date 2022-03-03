@@ -91,6 +91,7 @@ function renderCard(initialCards) {
     console.log(evt);
     evt.target.classList.toggle("cards__like-btn_active");
   });
+  liElement.querySelector(".cards__image").addEventListener("click", openImgPopup);
   deleteBtnElement.addEventListener("click", cardDeleteHandler);
 }
 
@@ -125,14 +126,13 @@ function closeAddForm () {
 function createCard (cardElement) {
   cardElement.querySelector(".cards__image").src = linkInput.value;
   cardElement.querySelector(".cards__title").textContent = titleInput.value;
+  cardElement.querySelector(".cards__image").addEventListener("click", openImgPopup);
   return cardElement;
 }
-//функция открытия попапа с картинкой
 function openImgPopup (evt) {
-  console.log("fff");
-  imgPopup.classList.add(".active");
-  overlay.classList.add(".active");
-  document.body.classList.add(".hidden");
+  imgPopup.classList.add("img-popup__active");
+  overlay.classList.add("img-popup__active");
+  document.body.classList.add("hidden");
   const cardElement = evt.target.closest(".cards__item");
   const cardImage = cardElement.querySelector(".cards__image");
   const cardTitle = cardElement.querySelector(".cards__title");
@@ -142,8 +142,8 @@ function openImgPopup (evt) {
   openedImageCaption.textContent = cardTitle.textContent;
 }
 function closeImgPopup () {
-  imgPopup.classList.remove("active");
-  overlay.classList.remove("active");
+  imgPopup.classList.remove("img-popup__active");
+  overlay.classList.remove("img-popup__active");
   document.body.classList.remove("hidden");
 }
 function cardDeleteHandler (evt) {
@@ -174,5 +174,6 @@ cardElement.querySelector(".cards__like-btn").addEventListener("click", function
   evt.target.classList.toggle("cards__like-btn_active");
 });
 cardDeleteBtn.addEventListener("click", cardDeleteHandler);
-document.querySelector(".cards__image").addEventListener("click", openImgPopup);
+//cardElement.querySelector(".cards__image").addEventListener("click", openImgPopup);
+overlay.addEventListener("click", closeImgPopup);
 imgPopupCloseBtn.addEventListener("click", closeImgPopup);

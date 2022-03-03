@@ -10,7 +10,6 @@
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/main/main.css);
 @import url(../blocks/overlay/overlay.css);
-@import url(../blocks/active/active.css);
 @import url(../blocks/popup-edit/popup-edit.css);
 @import url(../blocks/popup-add/popup-add.css);
 @import url(../blocks/popup-edit/__close-btn/popup-edit__close-btn.css);
@@ -32,6 +31,7 @@
 @import url(../blocks/popup-add/__overlay/_active/popup-add__overlay_active.css);
 @import url(../blocks/popup-edit/__overlay/_active/popup-edit__overlay_active.css);
 @import url(../blocks/img-popup/img-popup.css);
+@import url(../blocks/img-popup/__active/img-popup__active.css);
 @import url(../blocks/img-popup/__image/img-popup__image.css);
 @import url(../blocks/img-popup/__figure/img-popup__figure.css);
 @import url(../blocks/img-popup/__caption/img-popup__caption.css);

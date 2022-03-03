@@ -1,4 +1,4 @@
-.popup-add__overlay_active {
+.img-popup__active {
   visibility:visible;
   opacity:1;
   transition-delay:0s;

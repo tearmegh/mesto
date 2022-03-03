@@ -4,7 +4,9 @@
   left: calc(50% - 430px / 2);
   max-width: 430px;
   z-index: 10;
-  display: none; 
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear; 
 }
 @media screen and (max-width: 767.98px){
   .popup-edit {
