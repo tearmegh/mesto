@@ -80,6 +80,10 @@ function renderCard(initialCards) {
   liElement.appendChild(divElement);
   
   cards.appendChild(liElement);
+  likeBtnElement.addEventListener("click", function (evt) {
+    console.log(evt);
+    evt.target.classList.toggle("cards_like-btn_active");
+  });
   deleteBtnElement.addEventListener("click", cardDeleteHandler);
 }
 
@@ -140,4 +144,7 @@ closeEditFormBtn.addEventListener("click", closeEditForm);
 closeAddFormBtn.addEventListener("click", closeAddForm);
 editFormOverlay.addEventListener("click", closeEditForm);
 addFormOverlay.addEventListener("click", closeAddForm);
+cardElement.querySelector(".cards__like-btn").addEventListener("click", function (evt) {
+  evt.target.classList.toggle("cards_like-btn_active");
+});
 cardElement.querySelector(".cards__delete-btn").addEventListener("click", cardDeleteHandler);
