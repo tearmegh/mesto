@@ -1,12 +1,12 @@
 .popup-add__form {
-    background: #FFFFFF;
-    padding: 34px 36px 37px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
+  background: #FFFFFF;
+  padding: 34px 36px 37px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+@media screen and (max-width: 767.98px){
+  .popup-add__form { 
+    padding: 25px 22px;
   }
-  @media screen and (max-width: 767.98px){
-    .popup-add__form { 
-      padding: 25px 22px;
-    }
-  }
+}

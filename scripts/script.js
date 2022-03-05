@@ -38,11 +38,9 @@ const closeEditFormBtn = document.querySelector(".popup-edit__close-btn");
 const closeAddFormBtn = document.querySelector(".popup-add__close-btn");
 const editFormOverlay = document.querySelector(".popup-edit__overlay");
 const addFormOverlay = document.querySelector(".popup-add__overlay");
-const overlay = document.querySelector(".overlay");
+const imgPopupOverlay = document.querySelector(".img-popup__overlay");
 const imgPopup = document.querySelector(".img-popup");
-const imgPopupCardImage = imgPopup.querySelector(".img-popup__image");
 const imgPopupCloseBtn = imgPopup.querySelector(".img-popup__close-btn");
-
 const cardTemplate = document.getElementById("card-template").content;
 const cardElement = cardTemplate.querySelector(".cards__item").cloneNode(true);
 const cardDeleteBtn = cardElement.querySelector(".cards__delete-btn");
@@ -88,7 +86,6 @@ function renderCard(initialCards) {
   
   cards.appendChild(liElement);
   likeBtnElement.addEventListener("click", function (evt) {
-    console.log(evt);
     evt.target.classList.toggle("cards__like-btn_active");
   });
   liElement.querySelector(".cards__image").addEventListener("click", openImgPopup);
@@ -131,7 +128,7 @@ function createCard (cardElement) {
 }
 function openImgPopup (evt) {
   imgPopup.classList.add("img-popup__active");
-  overlay.classList.add("img-popup__active");
+  imgPopupOverlay.classList.add("img-popup__overlay_active");
   document.body.classList.add("hidden");
   const cardElement = evt.target.closest(".cards__item");
   const cardImage = cardElement.querySelector(".cards__image");
@@ -143,7 +140,7 @@ function openImgPopup (evt) {
 }
 function closeImgPopup () {
   imgPopup.classList.remove("img-popup__active");
-  overlay.classList.remove("img-popup__active");
+  imgPopupOverlay.classList.remove("img-popup__overlay_active");
   document.body.classList.remove("hidden");
 }
 function cardDeleteHandler (evt) {
@@ -174,6 +171,5 @@ cardElement.querySelector(".cards__like-btn").addEventListener("click", function
   evt.target.classList.toggle("cards__like-btn_active");
 });
 cardDeleteBtn.addEventListener("click", cardDeleteHandler);
-//cardElement.querySelector(".cards__image").addEventListener("click", openImgPopup);
-overlay.addEventListener("click", closeImgPopup);
+imgPopupOverlay.addEventListener("click", closeImgPopup);
 imgPopupCloseBtn.addEventListener("click", closeImgPopup);
