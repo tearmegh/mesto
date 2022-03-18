@@ -67,7 +67,6 @@ renderCards(initialCards);
 function openEditForm () {
   editForm.classList.add("active");
   document.body.classList.add("hidden");
-  editFormOverlay.classList.add("popup-edit__overlay_active");
   nameInput.value = nameText.textContent;
   captionInput.value = captionText.textContent;
 }
@@ -75,17 +74,14 @@ function openEditForm () {
 function openAddForm () {
   addForm.classList.add("active");
   document.body.classList.add("hidden");
-  addFormOverlay.classList.add("popup-add__overlay_active");
 }
 function closeEditForm () {
   editForm.classList.remove("active");
   document.body.classList.remove("hidden");
-  editFormOverlay.classList.remove("popup-edit__overlay_active");
 }
 function closeAddForm () {
   addForm.classList.remove("active");
   document.body.classList.remove("hidden");
-  addFormOverlay.classList.remove("popup-add__overlay_active");
 }
 function createCard (cardElement) {
   cardElement.querySelector(".cards__image").src = linkInput.value;
@@ -95,7 +91,7 @@ function createCard (cardElement) {
 }
 function openImgPopup (evt) {
   imgPopup.classList.add("active");
-  imgPopupOverlay.classList.add("img-popup__overlay_active");
+  imgPopupOverlay.classList.add("active");
   document.body.classList.add("hidden");
   const cardElement = evt.target.closest(".cards__item");
   const cardImage = cardElement.querySelector(".cards__image");
@@ -107,7 +103,7 @@ function openImgPopup (evt) {
 }
 function closeImgPopup () {
   imgPopup.classList.remove("active");
-  imgPopupOverlay.classList.remove("img-popup__overlay_active");
+  imgPopupOverlay.classList.remove("active");
   document.body.classList.remove("hidden");
 }
 function cardDeleteHandler (evt) {
