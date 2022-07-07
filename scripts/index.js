@@ -91,7 +91,6 @@ function createCard (cardElement) {
 }
 function openImgPopup (evt) {
   imgPopup.classList.add("active");
-  imgPopupOverlay.classList.add("active");
   document.body.classList.add("hidden");
   const cardElement = evt.target.closest(".cards__item");
   const cardImage = cardElement.querySelector(".cards__image");
@@ -103,7 +102,6 @@ function openImgPopup (evt) {
 }
 function closeImgPopup () {
   imgPopup.classList.remove("active");
-  imgPopupOverlay.classList.remove("active");
   document.body.classList.remove("hidden");
 }
 function cardDeleteHandler (evt) {
