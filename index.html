@@ -11,38 +11,6 @@
       <img class="header__logo" alt="логотип проекта Mesto" src="./images/logo-theme-dark.svg">
     </header>
     <main class="main">
-      <div class="popup-edit">
-        <form class="popup-edit__form" name="edit-form">
-          <h2 class="popup-edit__form-title">Редактировать профиль</h2>
-          <fieldset class="popup-edit__name-caption-container">
-            <input type="text" class="popup-edit__input popup-edit__input_type_name" placeholder="Имя" name="name">
-            <input type="text" class="popup-edit__input popup-edit__input_type_caption" placeholder="Описание" name="caption">
-          </fieldset>
-          <button type="submit" class="popup-edit__submit-btn" aria-label="сохранить изменения">Сохранить</button>
-          <button type="button" class="popup-edit__close-btn" aria-label="закрыть окно редактирования"></button>
-        </form>
-        <div class="popup-edit__overlay"></div>
-      </div>
-      <div class="popup-add">
-        <form class="popup-add__form" name="add-form">
-          <h2 class="popup-add__form-title">Новое место</h2>
-          <fieldset class="popup-add__title-link-container">
-            <input type="text" class="popup-add__input popup-add__input_type_title" placeholder="Название" name="title">
-            <input type="text" class="popup-add__input popup-add__input_type_link" placeholder="Ссылка на картинку" name="link">
-          </fieldset>
-          <button type="submit" class="popup-add__submit-btn" aria-label="создать">Создать</button>
-          <button type="button" class="popup-add__close-btn" aria-label="закрыть окно создания"></button>
-        </form>
-        <div class="popup-add__overlay"></div>
-      </div>
-      <div class="img-popup">
-        <figure class="img-popup__figure">
-          <img class="img-popup__image">
-          <figcaption class="img-popup__caption"></figcaption>
-        </figure>
-        <button type="button" class="img-popup__close-btn"></button>
-        <div class="img-popup__overlay"></div>
-      </div>
       <section class="profile page__profile">
         <img class="profile__image" alt="фотография профиля пользователя" src="./images/profile-image.jpg">
         <div class="profile__info">
@@ -56,48 +24,6 @@
       </section>
       <section>
         <ul class="cards page__cards">
-          <!--<li class="cards__item">
-            <img class="cards__image" alt="старый замок" src="./images/united-kingdom.jpg">
-            <div class="cards__title-btn-wrapper">
-              <h2 class="cards__title">Великобритания</h2>
-              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__image" alt="одинокие домики" src="./images/faroe-islands.jpg">
-            <div class="cards__title-btn-wrapper">
-              <h2 class="cards__title">Фарерские острова</h2>
-              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__image" alt="туманное поле" src="./images/netherlands.jpg">
-            <div class="cards__title-btn-wrapper">
-              <h2 class="cards__title">Нидерланды</h2>
-              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__image" alt="скалистая местность" src="./images/spain.jpg">
-            <div class="cards__title-btn-wrapper">
-              <h2 class="cards__title">Испания</h2>
-              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__image" alt="птица над туманным полем" src="./images/austria.jpg">
-            <div class="cards__title-btn-wrapper">
-              <h2 class="cards__title">Австрия</h2>
-              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__image" alt="живописный лес" src="./images/chile.jpg">
-            <div class="cards__title-btn-wrapper">
-              <h2 class="cards__title">Чили</h2>
-              <button class="cards__like-btn" type="button" aria-label="нравится"></button>
-            </div>
-          </li> -->
           <template id="card-template">
             <li class="cards__item">
               <img class="cards__image">
@@ -114,6 +40,39 @@
     <footer class="footer page__footer">
       <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
     </footer>
-    <script src="./scripts/script.js"></script>
+    <div class="popup-edit">
+      <form class="popup-edit__form" name="edit-form">
+        <h2 class="popup-edit__form-title">Редактировать профиль</h2>
+        <fieldset class="popup-edit__name-caption-container">
+          <input type="text" class="popup-edit__input popup-edit__input_type_name" placeholder="Имя" name="name">
+          <input type="text" class="popup-edit__input popup-edit__input_type_caption" placeholder="Описание" name="caption">
+        </fieldset>
+        <button type="submit" class="popup-edit__submit-btn" aria-label="сохранить изменения">Сохранить</button>
+        <button type="button" class="popup-edit__close-btn" aria-label="закрыть окно редактирования"></button>
+      </form>
+      <div class="popup-edit__overlay"></div>
+    </div>
+    <div class="popup-add">
+      <form class="popup-add__form" name="add-form">
+        <h2 class="popup-add__form-title">Новое место</h2>
+        <fieldset class="popup-add__title-link-container">
+          <input type="text" class="popup-add__input popup-add__input_type_title" placeholder="Название" name="title">
+          <input type="text" class="popup-add__input popup-add__input_type_link" placeholder="Ссылка на картинку" name="link">
+        </fieldset>
+        <button type="submit" class="popup-add__submit-btn" aria-label="создать">Создать</button>
+        <button type="button" class="popup-add__close-btn" aria-label="закрыть окно создания"></button>
+      </form>
+      <div class="popup-add__overlay"></div>
+    </div>
+    <div class="img-popup">
+      <figure class="img-popup__figure">
+        <img class="img-popup__image">
+        <figcaption class="img-popup__caption"></figcaption>
+      </figure>
+      <button type="button" class="img-popup__close-btn"></button>
+      <div class="img-popup__overlay"></div>
+    </div>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/initialCards.js"></script>
   </body>
 </html> 
