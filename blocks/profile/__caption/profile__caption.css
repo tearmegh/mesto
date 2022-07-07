@@ -3,21 +3,17 @@
   font-size: 18px;
   line-height: 1.2;
   margin: 16px 0 0;
-<<<<<<< HEAD
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 336px;
 }
-=======
-  }
->>>>>>> features/cards
 @media screen and (max-width: 767.98px){
   .profile__caption {
     font-size: 14px;
     line-height: 1.21;
     text-align: center;
     margin-top: 14px;
-<<<<<<< HEAD
+    max-width: 240px;
   }
 }
-=======
-    }
-  }
->>>>>>> features/cards

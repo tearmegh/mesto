@@ -1,0 +1,17 @@
+.popup-add {
+  position: fixed;
+  top: 195px;
+  left: calc(50% - 430px / 2);
+  max-width: 430px;
+  z-index: 10;
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+@media screen and (max-width: 767.98px){
+  .popup-add {
+    max-width: 282px;
+    top: 123px;
+    left: calc(50% - 282px / 2);
+  }
+} 

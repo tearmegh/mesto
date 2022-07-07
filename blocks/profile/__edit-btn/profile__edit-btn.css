@@ -1,40 +1,24 @@
 .profile__edit-btn {
-<<<<<<< HEAD
   background: url(../../../images/edit-btn.svg);
   background-size: contain;
   border: none;
   margin-left: 18px;
   height: 24px;
   width: 24px;
+  cursor: pointer;
+  position: relative;
+  top: 6px;
 }
 .profile__edit-btn:hover {
-    opacity: .6;
-    transition: .2s;
+  opacity: .6;
+  transition: .2s;
 }
 @media screen and (max-width: 767.98px){
   .profile__edit-btn {
     width: 18px;
     height: 18px;
     margin-left: 10px;
+    position: relative;
+    top: 3.6px;
   }
 }
-=======
-    background: url(../../../images/edit-btn.svg);
-    background-size: contain;
-    border: none;
-    margin-left: 18px;
-    height: 24px;
-    width: 24px;
-  }
-  .profile__edit-btn:hover {
-      opacity: .6;
-      transition: .2s;
-  }
-  @media screen and (max-width: 767.98px){
-    .profile__edit-btn {
-      width: 18px;
-      height: 18px;
-      margin-left: 10px;
-    }
-  } 
->>>>>>> features/cards

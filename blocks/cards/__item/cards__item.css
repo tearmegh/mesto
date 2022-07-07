@@ -1,8 +1,9 @@
 .cards__item {
-    margin: auto;
-    background-color: white;
-    width: 282px;
-    min-height: 361px;
-    border-radius: 10px;
-    overflow: hidden;
+  margin: auto;
+  background-color: white;
+  width: 282px;
+  min-height: 361px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }

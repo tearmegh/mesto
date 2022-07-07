@@ -1,5 +1,4 @@
 .profile__info {
-<<<<<<< HEAD
   color: white;
   margin-left: 30px;
   font-family: 'Inter', 'Arial', sans-serif;
@@ -9,14 +8,3 @@
     margin-left: 0;
   }
 }
-=======
-    color: white;
-    margin-left: 30px;
-    font-family: 'Inter', 'Arial', sans-serif;
-  }
-  @media screen and (max-width: 767.98px){
-    .profile__info {
-      margin-left: 0;
-    }
-  }
->>>>>>> features/cards

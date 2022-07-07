@@ -1,14 +1,10 @@
 .profile__image {
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
 }
 @media screen and (max-width: 767.98px) {
   .profile__image {
     margin-bottom: 26px;
   }
-<<<<<<< HEAD
-}
-=======
 } 
->>>>>>> features/cards
