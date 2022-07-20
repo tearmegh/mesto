@@ -11,6 +11,9 @@ const imgPopup = document.querySelector(".img-popup");
 const imgPopupCloseBtn = imgPopup.querySelector(".img-popup__close-btn");
 const cardTemplate = document.getElementById("card-template").content;
 const cardElement = cardTemplate.querySelector(".cards__item").cloneNode(true);
+const cardTitle = cardElement.querySelector(".cards__title");
+const cardImage = cardElement.querySelector(".cards__image");
+const cardImageLink = cardImage.getAttribute("src");
 const cardDeleteBtn = cardElement.querySelector(".cards__delete-btn");
 const cards = document.querySelector(".cards");
 const nameText = document.querySelector(".profile__name");
@@ -88,9 +91,16 @@ function closeAddForm () {
   addFormOverlay.classList.remove("popup-add__overlay_active");
 }
 function createCard (cardElement) {
-  cardElement.querySelector(".cards__image").src = linkInput.value;
-  cardElement.querySelector(".cards__title").textContent = titleInput.value;
+  cardImage.setAttribute('src', linkInput.value);
+  cardTitle.textContent = titleInput.value;
+  cardImage.setAttribute('alt', 'картинка');
   cardElement.querySelector(".cards__image").addEventListener("click", openImgPopup);
+  cardElement.querySelector(".cards__like-btn").addEventListener("click", function (evt) {
+    evt.target.classList.toggle("cards__like-btn_active");
+  });
+  cardDeleteBtn.addEventListener("click", cardDeleteHandler);
+  imgPopupOverlay.addEventListener("click", closeImgPopup);
+  imgPopupCloseBtn.addEventListener("click", closeImgPopup);
   return cardElement;
 }
 function openImgPopup (evt) {
@@ -98,7 +108,6 @@ function openImgPopup (evt) {
   imgPopupOverlay.classList.add("img-popup__overlay_active");
   document.body.classList.add("hidden");
   const cardElement = evt.target.closest(".cards__item");
-  const cardImage = cardElement.querySelector(".cards__image");
   const cardTitle = cardElement.querySelector(".cards__title");
   const openedImage = imgPopup.querySelector(".img-popup__image");
   const openedImageCaption = imgPopup.querySelector(".img-popup__caption");
@@ -134,9 +143,3 @@ closeEditFormBtn.addEventListener("click", closeEditForm);
 closeAddFormBtn.addEventListener("click", closeAddForm);
 editFormOverlay.addEventListener("click", closeEditForm);
 addFormOverlay.addEventListener("click", closeAddForm);
-cardElement.querySelector(".cards__like-btn").addEventListener("click", function (evt) {
-  evt.target.classList.toggle("cards__like-btn_active");
-});
-cardDeleteBtn.addEventListener("click", cardDeleteHandler);
-imgPopupOverlay.addEventListener("click", closeImgPopup);
-imgPopupCloseBtn.addEventListener("click", closeImgPopup);
